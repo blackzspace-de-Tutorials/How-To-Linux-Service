@@ -1,0 +1,13 @@
+[Unit]
+Description=BlackLeakz Automount
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=centos
+ExecStart=/bin/bash /usr/share/.autostart/automount.sh
+
+[Install]
+WantedBy=multi-user.target
